@@ -7,3 +7,16 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 @import '~admin-lte/dist/css/adminlte.css';
+
+
+.router-link-active{
+    color: white !important;
+}
+
+nav li:hover,
+ nav li.router-link-active,
+ nav li.router-link-exact-active {
+   background-color: rgb(41, 95, 95);
+   color: white;
+   cursor: pointer;
+ }

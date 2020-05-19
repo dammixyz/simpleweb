@@ -20,3 +20,12 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::middleware('auth')->group(function(){
+    /* Necessary for Vue routes to be found on url reload */
+    Route::get('{any}', function () {
+        return view('home');
+    })->where('any', '.*');
+});
+
